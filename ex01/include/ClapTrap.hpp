@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 10:31:55 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/06 11:29:48 by tmaillar         ###   ########.fr       */
+/*   Created: 2024/06/05 13:54:59 by tmaillar          #+#    #+#             */
+/*   Updated: 2024/06/06 09:54:23 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ class ClapTrap
         ClapTrap();
         ClapTrap(std::string name);
         ClapTrap(ClapTrap& other);
-        ClapTrap& operator=(const ClapTrap& other);
+        ClapTrap& operator=(ClapTrap& other);
         ~ClapTrap();
         
-        void            attack(const std::string& target);
+        virtual void            attack(const std::string& target);
         void            takeDamage(unsigned int amount);
         void            beRepaired(unsigned int amount);
         void            set_hitPoints(int hitPts);
@@ -42,9 +42,9 @@ class ClapTrap
         int             get_hitPoints(void);
         int             get_nrjPoints(void);
         int             get_attackDamage(void);
-        void            put_trap_info(void);
         std::string     get_name(void);
-};
+        void            put_info_clap(void);
 
+};
 
 #endif

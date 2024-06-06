@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 10:17:07 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/06 11:35:39 by tmaillar         ###   ########.fr       */
+/*   Created: 2024/06/05 13:55:03 by tmaillar          #+#    #+#             */
+/*   Updated: 2024/06/06 12:49:12 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,36 +22,33 @@ ClapTrap::ClapTrap(std::string name) : _name(name)
     _hit_points = 10;
     _energy_points = 10;
     _attack_damage = 0;
-    std::cout << "Construct of " << this->get_name() << std::endl;
+    std::cout << "Construct of ClapTrap : " << this->get_name() << std::endl;
 }
-ClapTrap& ClapTrap::operator=(const ClapTrap& other)
+ClapTrap& ClapTrap::operator=(ClapTrap& other)
 {
-    if (&other != this)
-    {
-        _name = (other._name + "_copy_assign");
-        _hit_points = other._hit_points;
-        _energy_points = other._energy_points;
-        _attack_damage = other._attack_damage;
-        std::cout << "Copy assignment of " << other._name
-        << " into " << _name << std::endl;
-    }
+    _name = (other._name + "_copy_assignment");
+    _hit_points = other._hit_points;
+    _energy_points = other._energy_points;
+    _attack_damage = other._attack_damage;
+    std::cout << "copy assignment of " << other._name
+    << " into " << this->_name << std::endl;
     return (*this);
 }
 
 ClapTrap::ClapTrap(ClapTrap& other)
 {
     _name = (other._name + "_copy");
-    _hit_points = other.get_hitPoints();
-    _energy_points = other.get_nrjPoints();
-    _attack_damage = other.get_attackDamage();
-    std::cout << "Copy of " << other._name
+    _hit_points = other._hit_points;
+    _energy_points = other._energy_points;
+    _attack_damage = other._attack_damage;
+    std::cout << "copy of : " << other._name
     << " into " << _name << std::endl;
 
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destruct of " << this->get_name() << std::endl;
+    std::cout << "Destruct of : " << this->get_name() << std::endl;
 }
 void    ClapTrap::set_hitPoints(int hitPts)
 {
@@ -66,9 +63,6 @@ void    ClapTrap::set_nrjPoints(int nrjPts)
 void    ClapTrap::set_attackDamage(int attackDam)
 {
     _attack_damage = attackDam;
-    std::cout << "The amout of damage points for "
-    << this->get_name() <<  " is now of : " << attackDam
-    << " points" << std::endl;
 }
 int     ClapTrap::get_hitPoints(void)
 {
@@ -100,7 +94,7 @@ void    ClapTrap::attack(const std::string& target)
     
     std::cout << "ClapTrap : " << this->get_name() << " attack "
     << target << " causing " << this->get_attackDamage()
-    << " points of damage" << std::endl;
+    << " points of damage" << std::endl;   
 }
 
 void    ClapTrap::takeDamage(unsigned int amount)
@@ -108,6 +102,7 @@ void    ClapTrap::takeDamage(unsigned int amount)
     this->set_hitPoints(this->get_hitPoints() - amount);
     if (this->get_hitPoints() <= 0)
     {
+        this->set_hitPoints(0);
         std::cout << "ClapTrap : " << this->get_name()
         << " is dead" << std::endl;
         return ;
@@ -130,10 +125,11 @@ void    ClapTrap::beRepaired(unsigned int amount)
     << " health points" << std::endl;
 }
 
-void    ClapTrap::put_trap_info(void)
+void    ClapTrap::put_info_clap()
 {
-    std::cout << this->get_name() << " have : " << std::endl;
-    std::cout << this->get_hitPoints() << " health points" << std::endl;
-    std::cout << this->get_nrjPoints() << " energy points" << std::endl;   
-    std::cout << this->get_attackDamage() << " points of damage" << std::endl << std::endl;
+    std::cout << "ClapTrap : " << this->get_name() << " have :" << std::endl; 
+    std::cout << this->get_hitPoints() << " health points, " << std ::endl;
+    std::cout << this->get_nrjPoints() << " energy points, and " << std ::endl;
+    std::cout << this->get_attackDamage() << " attack points" << std ::endl;
+
 }
