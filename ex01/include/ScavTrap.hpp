@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 13:55:01 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/06 13:04:55 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/07 09:23:01 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class ScavTrap : public ClapTrap
 {
     private :
-    
+        bool    _gate_mode;
     public :
     
         ScavTrap();

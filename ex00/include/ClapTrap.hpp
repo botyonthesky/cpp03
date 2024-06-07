@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 10:31:55 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/06 11:29:48 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/07 08:33:28 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ class ClapTrap
         int             get_hitPoints(void);
         int             get_nrjPoints(void);
         int             get_attackDamage(void);
-        void            put_trap_info(void);
+        void            put_info_clap(void);
         std::string     get_name(void);
 };
 

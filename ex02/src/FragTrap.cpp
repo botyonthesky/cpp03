@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 09:51:37 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/07 07:05:23 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/07 11:30:44 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,14 @@ FragTrap& FragTrap::operator=(const FragTrap& other)
 
 void    FragTrap::put_info_frag(void)
 {
-    std::cout << "FragTrap : " << this->get_name() << " have :" << std::endl 
-    << this->get_hitPoints() << " health points, " << std::endl
-    << this->get_nrjPoints() << " energy points, " << std::endl
-    << this->get_attackDamage() << " attack points." << std::endl;
+    std::cout << "FragTrap : " << this->_name << " have :" << std::endl 
+    << this->_hit_points << " health points, " << std::endl
+    << this->_energy_points << " energy points, " << std::endl
+    << this->_attack_damage << " attack points." << std::endl;
 }
 
 void    FragTrap::highFivesGyuys(void)
 {
-    std::cout << "FragTrap : " << this->get_name()
+    std::cout << "FragTrap : " << this->_name
     << " request for a positive high fives !" << std::endl;
 }

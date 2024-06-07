@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 13:54:59 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/06 13:04:50 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/07 09:07:52 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 class ClapTrap
 {
-    private:
+    protected:
         std::string     _name;
         int             _hit_points;
         int             _energy_points;
