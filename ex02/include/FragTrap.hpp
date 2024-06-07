@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 13:55:01 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/06 13:04:55 by tmaillar         ###   ########.fr       */
+/*   Created: 2024/06/07 06:51:51 by tmaillar          #+#    #+#             */
+/*   Updated: 2024/06/07 07:00:37 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-#include <string>
-#include <iostream>
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include <iostream>
+#include <string>
 
-class ScavTrap : public ClapTrap
+class FragTrap : public ClapTrap
 {
     private :
-    
+
     public :
-    
-        ScavTrap();
-        ScavTrap(std::string name);
-        ScavTrap(ScavTrap& other);
-        ScavTrap& operator=(const ScavTrap& other);
-        ~ScavTrap();
+        FragTrap();
+        FragTrap(std::string name);
+        FragTrap(FragTrap& other);
+        FragTrap& operator=(const FragTrap& other);
+        ~FragTrap();
 
-        void            attack(const std::string& target);
-        void            guardGate(void);
-        void            put_info_scav(void);
+        void    highFivesGyuys(void);
+        void    put_info_frag(void);
 
+        
 };
 
-#endif
+
+#endif 

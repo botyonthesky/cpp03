@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 13:55:08 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/06 12:47:44 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/06 13:05:07 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ScavTrap::ScavTrap(ScavTrap& other) : ClapTrap::ClapTrap(other)
 {
 }
 
-ScavTrap& ScavTrap::operator=(ScavTrap& other)
+ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 {
     ClapTrap::operator=(other);
     return (*this);

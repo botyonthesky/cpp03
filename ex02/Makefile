@@ -6,7 +6,7 @@
 #    By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 09:50:38 by tmaillar          #+#    #+#              #
-#    Updated: 2024/06/06 09:50:54 by tmaillar         ###   ########.fr        #
+#    Updated: 2024/06/06 12:52:57 by tmaillar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ OBJ_DIR		:= ./obj
 
 ROOT_SRC	:= main.cpp \
 				ClapTrap.cpp \
-				ScavTrap.cpp
+				ScavTrap.cpp \
+				FragTrap.cpp
 
 ROOT_DIR	:= $(SRC_DIR)
 ROOT_OBJ	:= $(addprefix $(OBJ_DIR)/, $(ROOT_SRC:.cpp=.o))

@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 13:55:03 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/06 12:49:12 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/06 13:05:01 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap(std::string name) : _name(name)
     _attack_damage = 0;
     std::cout << "Construct of ClapTrap : " << this->get_name() << std::endl;
 }
-ClapTrap& ClapTrap::operator=(ClapTrap& other)
+ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
     _name = (other._name + "_copy_assignment");
     _hit_points = other._hit_points;
