@@ -12,7 +12,7 @@
 
 NAME 		:= repetitiveWork
 
-CCPP		:= c++
+CXX		:= c++
 CXXFLAGS 	:= -std=c++98 -g -Wall -Wextra -Werror
 CPPFLAGS	+= -I./include
 CPPFLAGS	+= -MMD -MP -MF $(@:.o=.d)
@@ -34,7 +34,7 @@ OBJ			:= $(ROOT_OBJ)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(@D)
-	@$(CCPP) $(CXXFLAGS) $(CPPFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c $< -o $@
 
 all:		$(NAME)
 
@@ -42,7 +42,7 @@ $(NAME):	$(OBJ)
 	@echo "$(YELLOW) Compiling $(NAME) $(CPPFLAGS) ...$(END)"
 	@echo "$(GREEN) $(NAME) compiled successfully.$(END)"
 	@echo "$(YELLOW) Building $(NAME) ...$(END)" 
-	@$(CCPP) $(OBJ) -o $(NAME)
+	@$(CXX) $(OBJ) -o $(NAME)
 	@echo "$(GREEN) $(NAME) built successfully. $(END)"
 
 clean:

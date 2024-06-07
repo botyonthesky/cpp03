@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/06/05 10:15:32 by tmaillar          #+#    #+#              #
-#    Updated: 2024/06/05 13:06:02 by tmaillar         ###   ########.fr        #
+#    Created: 2024/06/07 12:07:34 by tmaillar          #+#    #+#              #
+#    Updated: 2024/06/07 13:53:06 by tmaillar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		:= andOpen
+NAME 		:= nowItsWeird
 
-CXX		:= c++
-CXXFLAGS 	:= -std=c++98 -g -Wall -Wextra -Werror
+CXX			:= c++
+CXXFLAGS 	:= -std=c++98 -g -Wall -Wextra -Werror -Wno-shadow
 CPPFLAGS	+= -I./include
 CPPFLAGS	+= -MMD -MP -MF $(@:.o=.d)
 
@@ -21,7 +21,10 @@ SRC_DIR		:= ./src
 OBJ_DIR		:= ./obj
 
 ROOT_SRC	:= main.cpp \
-				ClapTrap.cpp 
+				ClapTrap.cpp \
+				ScavTrap.cpp \
+				FragTrap.cpp \
+				DiamondTrap.cpp
 
 ROOT_DIR	:= $(SRC_DIR)
 ROOT_OBJ	:= $(addprefix $(OBJ_DIR)/, $(ROOT_SRC:.cpp=.o))
