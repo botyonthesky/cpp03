@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 12:09:07 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/07 15:51:03 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/10 13:07:58 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,17 @@
 ScavTrap::ScavTrap()
 {
     std::cout << "Basic constructor" << std::endl;
+    _hit_points = 100;
+    _energy_points = 50;
+    _attack_damage = 20;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
     std::cout << "Construct of Scavtrap : " << _name << std::endl;
-    this->_hit_points = 100;
-    this->_energy_points = 50;
-    this->_attack_damage = 20;
+    _hit_points = 100;
+    _energy_points = 50;
+    _attack_damage = 20;
 }
 
 ScavTrap::~ScavTrap()

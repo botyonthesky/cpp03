@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 12:09:13 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/07 12:11:51 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/10 11:59:40 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 ClapTrap::ClapTrap(void)
 {
-    
+    std::cout << "Basic constructor" << std::endl;
+    _hit_points = 10;
+    _energy_points = 10;
+    _attack_damage = 0;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name)

@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 12:09:21 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/07 14:09:56 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/10 12:24:31 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ class FragTrap : virtual public ClapTrap
         FragTrap& operator=(const FragTrap& other);
         ~FragTrap();
 
-        void    highFivesGyuys(void);
-        void    put_info_frag(void);
+        void            highFivesGyuys(void);
+        void            put_info_frag(void);
 
         
 };

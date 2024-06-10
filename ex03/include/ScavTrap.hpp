@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 12:09:23 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/07 15:20:11 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/10 12:24:23 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ class ScavTrap : virtual public ClapTrap
         ~ScavTrap();
 
         virtual void            attack(const std::string& target);
-        void            guardGate(void);
-        void            put_info_scav(void);
+        void                    guardGate(void);
+        void                    put_info_scav(void);
 
 };
 
