@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 12:12:46 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/19 12:49:46 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/19 13:02:29 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ DiamondTrap::~DiamondTrap()
 DiamondTrap::DiamondTrap(DiamondTrap& other) :
 ClapTrap::ClapTrap(other), ScavTrap::ScavTrap(other), FragTrap::FragTrap(other)
 {
-    
+    this->_name = other._name;
 }
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
 {
