@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 12:12:46 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/10 13:14:55 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/19 12:49:46 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ClapTrap(name + "_clap_name"), ScavTrap(name),
 FragTrap(name), _name(name)
 {
     std::cout << "Construct of DiamondTrap : " << _name << std::endl;
-    ScavTrap copy;
+    ScavTrap copy("tmp");
     _hit_points = FragTrap::_hit_points;
     _energy_points = copy.get_nrjPoints();
     _attack_damage = FragTrap::_attack_damage;
@@ -42,7 +42,9 @@ ClapTrap::ClapTrap(other), ScavTrap::ScavTrap(other), FragTrap::FragTrap(other)
 }
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
 {
+    this->_name = other._name;
     ClapTrap::operator=(other);
+    
     return (*this);
 }
 

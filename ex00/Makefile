@@ -6,7 +6,7 @@
 #    By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/05 10:15:32 by tmaillar          #+#    #+#              #
-#    Updated: 2024/06/10 09:06:35 by tmaillar         ###   ########.fr        #
+#    Updated: 2024/06/19 12:54:13 by tmaillar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,6 @@ fclean: 		clean
 				@echo "$(YELLOW) Cleaning object files, dependencies and removing $(NAME)...$(END)"
 				@rm -rf $(NAME)
 				@echo "$(GREEN) Full clean complete.$(END)"
-
 
 re: 			fclean
 				@$(MAKE) --no-print-directory all
