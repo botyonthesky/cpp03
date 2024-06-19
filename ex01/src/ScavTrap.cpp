@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 13:55:08 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/07 11:29:57 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/19 11:32:33 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,5 @@ void    ScavTrap::put_info_scav(void)
     << " have :" << std::endl;
     std::cout << this->_hit_points << " health points, " << std::endl;
     std::cout<< this->_energy_points << " energy points, and " << std::endl;
-    std::cout<< this->_attack_damage << " attack points" << std::endl << std::endl;
+    std::cout<< this->_attack_damage << " attack points" << std::endl;
 }

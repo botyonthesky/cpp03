@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 09:51:37 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/07 15:48:08 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/19 11:43:50 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void    FragTrap::highFivesGyuys(void)
 {
     if (this->_hit_points == 0)
     {
-        std::cout << _name << " cannot ask for a high five," << _name
+        std::cout << _name << " cannot ask for a high five, " << _name
         <<  " is dead !!" << std::endl;
         return ;
     }

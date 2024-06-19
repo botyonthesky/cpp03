@@ -6,14 +6,14 @@
 #    By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/07 12:07:34 by tmaillar          #+#    #+#              #
-#    Updated: 2024/06/10 10:23:16 by tmaillar         ###   ########.fr        #
+#    Updated: 2024/06/19 11:47:19 by tmaillar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 			:= nowItsWeird
 
 CXX				:= c++
-CXXFLAGS 		:= -std=c++98 -g -Wall -Wextra -Werror -Wno-shadow
+CXXFLAGS 		:= -std=c++98 -Wall -Wextra -Werror -Wno-shadow
 CPPFLAGS		+= -I./include
 CPPFLAGS		+= -MMD -MP -MF $(@:.o=.d)
 

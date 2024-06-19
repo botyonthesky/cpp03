@@ -6,7 +6,7 @@
 /*   By: tmaillar <tmaillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 09:51:35 by tmaillar          #+#    #+#             */
-/*   Updated: 2024/06/07 07:06:06 by tmaillar         ###   ########.fr       */
+/*   Updated: 2024/06/19 11:43:17 by tmaillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ ClapTrap::~ClapTrap()
 void    ClapTrap::set_hitPoints(int hitPts)
 {
     _hit_points = hitPts;
+     std::cout << "The hit points of : " << this->get_name()
+    << " is now of : " << hitPts << " points." << std::endl;
 }
 
 void    ClapTrap::set_nrjPoints(int nrjPts)
